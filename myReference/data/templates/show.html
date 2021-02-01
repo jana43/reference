@@ -1,0 +1,14 @@
+
+{% extends 'index.html' %}
+{% block content %}
+    <div class="container">
+        <p>{{data.tittle}}</p>
+        <p>{{data.data|safe}}</p>
+        {% if data.pdf.url != "" %}
+        <object data="{{data.pdf.url}}" type="application/pdf" width="750px" height="750px">
+            <a href = "{{data.pdf.url}}">seethe full documentation</a>
+        </object>
+        {% endif %}
+    </div>
+
+{% endblock %}
